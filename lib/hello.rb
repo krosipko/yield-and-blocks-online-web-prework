@@ -6,13 +6,13 @@ def hello_t(array)
     yield array[i]
     i = i + 1
     end
-    array 
+    array
+  else 
+    puts "Hey! No block was given!"
   end
 
   hello_t(["Tim", "Tom", "Jim"]) do |name|
-    if name.start_with?("T")
-      puts "Hi, #{name}"
-  else 
-    puts "Hey! No block was given!"
+  if name.start_with?("T")
+    puts "Hi, #{name}"
   end
 end
